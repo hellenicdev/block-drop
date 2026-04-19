@@ -1,0 +1,51 @@
+      body {
+        font-family: 'Inter', sans-serif; /* A common modern font, Tailwind defaults are also good */
+        overscroll-behavior: none; /* Prevents pull-to-refresh on mobile if applicable */
+      }
+      /* Apply a dark theme as base for the game */
+      html, body, #root {
+        height: 100%;
+        margin: 0;
+        background-color: #111827; /* bg-gray-900 */
+        color: #f3f4f6; /* bg-gray-100 */
+      }
+      .tetris-board-bg {
+        background-color: #1f2937; /* bg-gray-800 */
+      }
+      .cell-border {
+        border: 1px solid #374151; /* border-gray-700 */
+      }
+       .preview-grid-bg {
+        background-color: #1f2937; /* bg-gray-800 */
+      }
+
+      /* Mobile optimization */
+      @media (max-width: 768px) {
+        .mobile-fullscreen {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 50;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #111827;
+        }
+
+        /* Prevent browser zoom on double tap */
+        * { touch-action: manipulation; }
+      }
+	  
+.foot {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+	text-align: center;
+	font-size: 14px;
+	color: gray;
+	background: white;
+}
